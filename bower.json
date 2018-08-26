@@ -1,0 +1,11 @@
+{
+  "name": "HSIMatchingGame",
+  "private": "true",
+  "devDependencies": {},
+  "dependencies": {
+    "jquery": "jquery#*",
+    "jquery-ui": "jquery-ui#*",
+    "normalize-css": "normalize.css#^3.0.3",
+    "jquery-ui-touch-punch": "*"
+  }
+}

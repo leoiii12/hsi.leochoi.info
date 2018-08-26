@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matching Game - HOSPITALITY STUDENT INITIATIVE</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="lib/normalize-css/normalize.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Source Sans Pro", sans-serif;
+            background-color: rgb(244, 244, 244);
+        }
+
+        #page-loading, #page-home, #page-game, #page-end {
+            text-align: center;
+        }
+
+        #page-home, #page-end {
+            /* Initial state*/
+            display: none;
+        }
+
+        #labels-container, #select-areas-container, #options-container {
+            float: left;
+        }
+
+        #labels-container {
+            width: 25%;
+        }
+
+        #select-areas-container {
+            width: 40%;
+        }
+
+        #options-container {
+            width: 35%;
+        }
+
+        .labels {
+            border: 1px solid black;
+            padding: 15px 10px;
+            width: 85%;
+            height: 40px;
+            margin: 10px auto;
+            background-color: #FFFFFF;
+        }
+
+        .select-areas {
+            border: 1px solid black;
+            padding: 10px 10px;
+            height: 50px;
+            width: 85%;
+            margin: 10px auto;
+            opacity: 0.5;
+            background-color: #FFFFFF;
+        }
+
+        .select-areas.hovered {
+            opacity: 0.8;
+        }
+
+        .options {
+            border: 1px solid black;
+            padding: 10px;
+            width: 90%;
+            margin: 10px auto;
+            background-color: #FFFFFF;
+        }
+
+        .options.ui-draggable-dragging {
+            background: green;
+            box-shadow: 0 0 3px #888;
+        }
+    </style>
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+
+<div id="page-loading">
+    <h2>Loading</h2>
+</div>
+
+<div id="page-home">
+    <img src="img/logo.png" alt="logo" style="width: 600px;">
+    <h1>Matching Game</h1>
+    <br>
+    <button style="height: 40px;" onclick="startGame();">Click Here To Start</button>
+</div>
+
+<div id="page-game">
+    <h1 id="timer"></h1>
+
+    <div id="labels-container"></div>
+    <div id="select-areas-container"></div>
+    <div id="options-container"></div>
+</div>
+
+<div id="page-end">
+    <img src="img/logo.png" alt="logo" style="width: 600px;">
+    <h2>Result</h2>
+    <br>
+    <h3 id="score"></h3>
+</div>
+
+<script src="js/loading.js"></script>
+<script src="js/playing.js"></script>
+<script src="js/end.js"></script>
+
+<script>
+    document.onselectstart = function () {
+        return false;
+    };
+
+    document.oncontextmenu = function () {
+        return false;
+    };
+</script>
+
+</body>
+</html>
