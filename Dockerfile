@@ -5,10 +5,7 @@ WORKDIR /home/hsi/
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
-RUN npm install -g bower
-
 COPY ./ ./
-RUN bower install --allow-root
 
 FROM nginx:alpine
 
