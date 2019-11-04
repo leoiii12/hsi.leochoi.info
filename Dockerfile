@@ -12,4 +12,4 @@ FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=sdk /home/hsi/ /usr/share/nginx/html
+COPY --from=sdk /home/hsi/www /usr/share/nginx/html
